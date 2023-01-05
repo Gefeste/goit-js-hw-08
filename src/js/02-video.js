@@ -26,3 +26,25 @@ player.setCurrentTime(secondTime).then(function (seconds) {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+// const onPlay = function () {
+//     throttle(function(currentTime) {
+//         localStorage.setItem("videoplayer-current-time", JSON.stringify(currentTime.seconds))
+//     }, 1000)
+// }
+// console.log(onPlay())
+
+// player.on('timeupdate', onPlay)
+
+
