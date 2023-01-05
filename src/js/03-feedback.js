@@ -6,22 +6,12 @@ const email = document.querySelector('form input')
 const obj = {};
 returnTextValue()
 
-function onEmailInput(e) {
-     const textValue = e.currentTarget.value;
-    obj.email = textValue;
-    localStorage.setItem("feedback-form-state", JSON.stringify(obj))
+form.addEventListener('input', throttle(onFormInput, 500))
+
+function onFormInput(e) {
+    obj[e.target.name] = e.target.value
+   localStorage.setItem("feedback-form-state", JSON.stringify(obj))
 }
-
-function onMessageInput(e) {
-    const textValue = e.currentTarget.value;    
-    obj.message = textValue;
-    localStorage.setItem("feedback-form-state", JSON.stringify(obj))
-}
-
-email.addEventListener('input', throttle(onEmailInput, 500));
-
-
-input.addEventListener('input',throttle(onMessageInput, 500))
 
 
 form.addEventListener('submit', (e) => {
